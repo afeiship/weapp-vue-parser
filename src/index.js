@@ -1,4 +1,3 @@
-const fs = require('fs');
 const DomParser = require('dom-parser');
 const pretty = require('pretty');
 const beautify = require('js-beautify');

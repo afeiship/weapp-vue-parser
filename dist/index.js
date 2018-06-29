@@ -18,7 +18,6 @@ exports.default = function (inHtml, inOptions) {
   };
 };
 
-var fs = require('fs');
 var DomParser = require('dom-parser');
 var pretty = require('pretty');
 var beautify = require('js-beautify');
