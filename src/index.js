@@ -1,5 +1,4 @@
 const DomParser = require('dom-parser');
-const pretty = require('pretty');
 const beautify = require('js-beautify');
 const parser = new DomParser();
 const DEFAULT_OPTIONS = { indent_size: 2 };
@@ -12,8 +11,8 @@ export default function (inHtml, inOptions) {
   const options = inOptions || DEFAULT_OPTIONS;
 
   return {
-    html: pretty(html, options),
-    style: beautify(style, options),
+    html: beautify.html(html, options),
+    style: beautify.css(style, options),
     script: beautify(script, options)
   }
 };

@@ -28,7 +28,6 @@
   },
   "dependencies": {
     "dom-parser": "^0.1.5",
-    "js-beautify": "^1.7.5",
-    "pretty": "^2.0.0"
+    "js-beautify": "^1.7.5"
   }
 }
