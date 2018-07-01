@@ -1,21 +1,21 @@
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+    value: true
 });
 
 exports.default = function (inHtml, inOptions) {
-  var dom = parser.parseFromString(inHtml);
-  var html = dom.getElementsByTagName('template')[0].innerHTML;
-  var style = dom.getElementsByTagName('style')[0].innerHTML;
-  var script = dom.getElementsByTagName('script')[0].innerHTML;
-  var options = inOptions || DEFAULT_OPTIONS;
+    var dom = parser.parseFromString(inHtml);
+    var template = dom.getElementsByTagName('template')[0].innerHTML;
+    var style = dom.getElementsByTagName('style')[0].innerHTML;
+    var script = dom.getElementsByTagName('script')[0].innerHTML;
+    var options = inOptions || DEFAULT_OPTIONS;
 
-  return {
-    html: beautify.html(html, options),
-    style: beautify.css(style, options),
-    script: beautify(script, options)
-  };
+    return {
+        template: beautify.html(template, options),
+        style: beautify.css(style, options),
+        script: beautify(script, options)
+    };
 };
 
 var DomParser = require('dom-parser');

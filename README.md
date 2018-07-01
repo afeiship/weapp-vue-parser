@@ -18,19 +18,17 @@ const html = fs.readFileSync(
 );
 
 const result = weappVueParser(html.toString());
+const { template, style, script } = result;
 
-fs.writeFileSync(`${dist_dir}/card.html`, result.html);
-fs.writeFileSync(`${dist_dir}/card.css`, result.style);
-fs.writeFileSync(`${dist_dir}/card.js`, result.script);
+fs.writeFileSync(`${dist_dir}/card.wxml`, template);
+fs.writeFileSync(`${dist_dir}/card.wxss`, style);
+fs.writeFileSync(`${dist_dir}/card.js`, script);
 ```
 
 ## result:
 ```conf
 .
-├── card
-│   ├── card.css
-│   ├── card.html
-│   └── card.js
-├── card.vue
-└── test.js
+├── card.js
+├── card.wxml
+└── card.wxss
 ```
